@@ -1,4 +1,4 @@
-package com.alijan.newsapp.ui.fragment.onboarding
+package com.alijan.newsapp.ui.onboarding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

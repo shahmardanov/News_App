@@ -1,10 +1,11 @@
-package com.alijan.newsapp.ui.fragment.onboarding
+package com.alijan.newsapp.ui.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.alijan.newsapp.databinding.FragmentOnboardingBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -45,7 +46,7 @@ class OnboardingFragment : Fragment() {
         if (buttonType == "next" && currentItem < 2) {
             binding.viewPagerOnboarding.currentItem += 1
         } else {
-            // navigate ele
+            findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToSignUpFragment())
         }
 
         if (buttonType == "back" && currentItem > 0) {
