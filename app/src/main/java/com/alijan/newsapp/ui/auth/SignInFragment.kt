@@ -1,23 +1,17 @@
 package com.alijan.newsapp.ui.auth
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.alijan.newsapp.R
 import com.alijan.newsapp.databinding.FragmentSignInBinding
 import com.alijan.newsapp.util.gone
 import com.alijan.newsapp.util.invisible
 import com.alijan.newsapp.util.toastError
 import com.alijan.newsapp.util.visible
-import www.sanju.motiontoast.MotionToast
-import www.sanju.motiontoast.MotionToastStyle
 
 class SignInFragment : Fragment() {
     private var _binding: FragmentSignInBinding? = null
