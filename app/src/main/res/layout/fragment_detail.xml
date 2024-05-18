@@ -15,12 +15,28 @@
         android:background="@color/white"
         tools:context=".ui.detail.DetailFragment">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDetailFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingHorizontal="24dp"
+            android:text="Following"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewSourceImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewSourceImage" />
+
         <ImageView
             android:id="@+id/imageViewLeftArrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             android:src="@drawable/left_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +45,7 @@
             android:id="@+id/imageViewShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/share"
             app:layout_constraintEnd_toStartOf="@+id/imageViewThreeDot"
@@ -39,7 +55,7 @@
             android:id="@+id/imageViewThreeDot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             android:layout_marginEnd="24dp"
             android:src="@drawable/three_dot_vertical"
             app:layout_constraintEnd_toEndOf="parent"
