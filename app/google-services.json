@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "26525167735",
+    "project_id": "newsapp-1e6cf",
+    "storage_bucket": "newsapp-1e6cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26525167735:android:862dc2f69cc3065ce55672",
+        "android_client_info": {
+          "package_name": "com.alijan.newsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVslcpgBssUilrxkP686dY_iF54_9T568"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
