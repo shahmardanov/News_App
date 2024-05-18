@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 class SmallNewsCardAdapter : RecyclerView.Adapter<SmallNewsCardAdapter.SmallNewsCardViewHolder>() {
 
     private val newsList = arrayListOf<ArticleModel>()
+    lateinit var onClick: (item: ArticleModel) -> Unit
 
     inner class SmallNewsCardViewHolder(val itemSmallNewsCardBinding: ItemSmallNewsCardBinding) :
         RecyclerView.ViewHolder(itemSmallNewsCardBinding.root)
@@ -28,6 +29,10 @@ class SmallNewsCardAdapter : RecyclerView.Adapter<SmallNewsCardAdapter.SmallNews
     override fun onBindViewHolder(holder: SmallNewsCardViewHolder, position: Int) {
         val item = newsList[position]
         holder.itemSmallNewsCardBinding.item = item
+
+        holder.itemSmallNewsCardBinding.clSmallNews.setOnClickListener {
+            onClick(item)
+        }
 
         item.title?.let {
             holder.itemSmallNewsCardBinding.textViewDescription.text = truncatedStr(it)

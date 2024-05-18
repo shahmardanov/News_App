@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.alijan.newsapp.databinding.FragmentHomeBinding
 import com.alijan.newsapp.util.gone
 import com.alijan.newsapp.util.visible
@@ -36,15 +37,19 @@ class HomeFragment : Fragment() {
 
     private fun observeData(){
         viewModel.newsList.observe(viewLifecycleOwner){
-            smallNewsCardAdapter.updateList(it)
+            smallNewsCardAdapter.updateList(it.take(20))
         }
 
         viewModel.isLoading.observe(viewLifecycleOwner){
             if(it){
-                binding.progressBarNews.gone()
-            } else {
                 binding.progressBarNews.visible()
+            } else {
+                binding.progressBarNews.gone()
             }
+        }
+
+        smallNewsCardAdapter.onClick = {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(it))
         }
 
     }

@@ -42,13 +42,14 @@ class HomeViewModel: ViewModel() {
                         _newsList.value = it2
                     }
                 }
+                _isLoading.value = false
             }
 
             override fun onFailure(call: Call<NewsResponseModel>, t: Throwable) {
                 _errorMessage.value = t.localizedMessage
+                _isLoading.value = false
             }
 
         })
-        _isLoading.value = false
     }
 }

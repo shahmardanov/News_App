@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.onboardingFragment, R.id.signInFragment, R.id.signUpFragment -> {
+                R.id.onboardingFragment, R.id.signInFragment, R.id.signUpFragment, R.id.detailFragment -> {
                     binding.bottomNavigationView.gone()
                 }
 
