@@ -5,6 +5,13 @@ import androidx.annotation.DrawableRes
 import androidx.databinding.BindingAdapter
 
 @BindingAdapter("setImageFromLocal")
-fun setImageUrl(imageView: ImageView, image: Int){
+fun setImageLocal(imageView: ImageView, image: Int){
     imageView.setImageResource(image)
+}
+
+@BindingAdapter("setImageFromUrl")
+fun setImageUrl(imageView: ImageView, url: String?){
+    url?.let {
+        imageView.setImageUrl(it)
+    }
 }
