@@ -1,4 +1,4 @@
-package com.alijan.newsapp.ui.auth
+package com.alijan.newsapp.ui.authentication
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.alijan.newsapp.R
-import com.alijan.newsapp.databinding.FragmentSignInBinding
 import com.alijan.newsapp.databinding.FragmentSignUpBinding
 import com.alijan.newsapp.util.gone
 import com.alijan.newsapp.util.invisible
@@ -48,7 +46,7 @@ class SignUpFragment : Fragment() {
 
             viewModel.requestSignUp(email,password)
         } else {
-            toastError(context,"Uğursuz cəhd","Xanaları tam doldurun!")
+            toastError(context,"Attempt failed, please check again","Fill in the boxes completely")
         }
     }
 
@@ -68,7 +66,7 @@ class SignUpFragment : Fragment() {
             if(it){
                 findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToSignInFragment())
             } else {
-                toastError(context,"Uğursuz cəhd",viewModel.errorMessage.value.toString())
+                toastError(context,"Attempt failed, please check again",viewModel.errorMessage.value.toString())
             }
         }
 

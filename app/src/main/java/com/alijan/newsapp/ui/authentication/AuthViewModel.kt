@@ -1,4 +1,4 @@
-package com.alijan.newsapp.ui.auth
+package com.alijan.newsapp.ui.authentication
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

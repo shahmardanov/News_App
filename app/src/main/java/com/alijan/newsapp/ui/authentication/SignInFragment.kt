@@ -1,4 +1,4 @@
-package com.alijan.newsapp.ui.auth
+package com.alijan.newsapp.ui.authentication
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -47,7 +47,7 @@ class SignInFragment : Fragment() {
 
             viewModel.requestSignIn(email,password)
         } else {
-            toastError(context,"Uğursuz cəhd","Xanaları tam doldurun!")
+            toastError(context,"Attempt failed, please check again","Fill in the boxes completely")
         }
     }
 
@@ -66,7 +66,7 @@ class SignInFragment : Fragment() {
             if(it){
                 findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToHomeFragment())
             } else {
-                toastError(context,"Uğursuz cəhd","E-mail və ya şifrə doğru daxil edin!")
+                toastError(context,"Attempt failed, please check again","Enter your e-mail or password correctly!")
             }
         }
 

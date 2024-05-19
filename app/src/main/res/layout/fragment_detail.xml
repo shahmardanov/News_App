@@ -19,6 +19,7 @@
             android:id="@+id/buttonDetailFollow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
             android:layout_marginEnd="24dp"
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/poppins_semibold"
@@ -27,9 +28,8 @@
             android:textColor="@color/white"
             android:textSize="16sp"
             app:cornerRadius="6dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewSourceImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageViewSourceImage" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewShare" />
 
         <ImageView
             android:id="@+id/imageViewLeftArrow"
@@ -63,41 +63,31 @@
 
         <ImageView
             android:id="@+id/imageViewNewsImage"
+            setImageFromUrl="@{item.urlToImage}"
             android:layout_width="0dp"
             android:layout_height="250dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="164dp"
             android:layout_marginEnd="24dp"
             android:scaleType="fitXY"
-            setImageFromUrl="@{item.urlToImage}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewSourceImage"
+            app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/backgrounds/scenic" />
-
-        <ImageView
-            android:id="@+id/imageViewSourceImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/facebook"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewLeftArrow" />
 
         <TextView
             android:id="@+id/textViewSourceTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="88dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="@{item.source.name}"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewSourceImage"
-            app:layout_constraintStart_toEndOf="@+id/imageViewSourceImage"
-            app:layout_constraintTop_toTopOf="@+id/imageViewSourceImage" />
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewDetailTitle"
@@ -128,5 +118,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewDetailTitle" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLeftArrow"
+            app:srcCompat="@drawable/wikipedia" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
