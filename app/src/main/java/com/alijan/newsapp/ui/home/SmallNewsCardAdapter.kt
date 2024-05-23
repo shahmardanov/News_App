@@ -3,10 +3,8 @@ package com.alijan.newsapp.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.alijan.newsapp.R
 import com.alijan.newsapp.databinding.ItemSmallNewsCardBinding
 import com.alijan.newsapp.model.ArticleModel
-import com.bumptech.glide.Glide
 
 class SmallNewsCardAdapter : RecyclerView.Adapter<SmallNewsCardAdapter.SmallNewsCardViewHolder>() {
 

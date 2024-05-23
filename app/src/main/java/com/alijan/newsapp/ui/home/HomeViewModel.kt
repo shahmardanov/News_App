@@ -1,13 +1,11 @@
 package com.alijan.newsapp.ui.home
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.alijan.newsapp.api.ApiClient
 import com.alijan.newsapp.model.ArticleModel
 import com.alijan.newsapp.model.NewsResponseModel
-import com.alijan.newsapp.util.toastError
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
